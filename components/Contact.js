@@ -1,7 +1,7 @@
 import Zoom from "react-reveal/Zoom";
 
 const Contact = () => (
-  <div className="parent" id="destination6">
+  <div className="parent" id="contact">
     <h1>Contact</h1>
     <Zoom left>
       <p>

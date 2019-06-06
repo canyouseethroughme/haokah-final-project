@@ -4,7 +4,7 @@ import Zoom from "react-reveal/Zoom";
 
 const Cards = () => {
   return (
-    <div width="100%" id="destination3">
+    <div width="100%" id="gallery">
       <h1>Gallery</h1>
       <Zoom bottom>
         <Carousel>

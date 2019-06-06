@@ -1,48 +1,4 @@
-// import events from "../data/events";
 import Event from "../components/sections/Event";
-
-// const Events = () => {
-//   const eventComponent = events.map(event => (
-//     <Event
-//       key={event.id}
-//       picture={event.picture}
-//       date={event.date}
-//       event={event.event}
-//       location={event.location}
-//     />
-//   ));
-//   return (
-//     <div id="destination4">
-//       <h1>Events</h1>
-
-//       <div className="grid">{eventComponent}</div>
-
-//       <style jsx>{`
-//         div {
-//           min-height: calc(100vh - 15rem);
-//           background-color: #0e0e0e;
-//           padding-top: 12rem;
-//         }
-//         .grid {
-//           display: grid;
-//           grid-template-columns: 1fr 1fr;
-//           justify-items: center;
-//           grid-gap: 1rem;
-//           padding-top: 0;
-//         }
-//         h1 {
-//           font-family: "Julius Sans One";
-//           font-size: 2rem;
-//           color: #f7f7f2;
-//           padding-bottom: 5rem;
-//           padding-left: 10rem;
-//         }
-//       `}</style>
-//     </div>
-//   );
-// };
-
-// export default Events;
 
 class Events extends React.Component {
   constructor(props) {
@@ -79,7 +35,7 @@ class Events extends React.Component {
     });
 
     return (
-      <div id="destination4">
+      <div id="events">
         <h1>Events</h1>
 
         <div className="grid">{events}</div>

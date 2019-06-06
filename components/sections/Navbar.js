@@ -34,22 +34,22 @@ class Navbar extends React.Component {
           <img src="static/haokah_logo_white.png" alt="logo" />
           <nav>
             <ul>
-              <Link href="#destination1">
+              <Link href="#home">
                 <a style={{ color: "#f7f7f2" }}>Home</a>
               </Link>
-              <Link href="#destination2">
+              <Link href="#about">
                 <a style={{ color: "#f7f7f2" }}>About</a>
               </Link>
-              <Link href="#destination3">
+              <Link href="#gallery">
                 <a style={{ color: "#f7f7f2" }}>Gallery</a>
               </Link>
-              <Link href="#destination4">
+              <Link href="#events">
                 <a style={{ color: "#f7f7f2" }}>Events</a>
               </Link>
-              <Link href="#destination5">
+              <Link href="#releases">
                 <a style={{ color: "#f7f7f2" }}>Releases</a>
               </Link>
-              <Link href="#destination6">
+              <Link href="#contact">
                 <a style={{ color: "#f7f7f2" }}>Contact</a>
               </Link>
             </ul>
@@ -64,22 +64,22 @@ class Navbar extends React.Component {
           <img src="static/haokah_logo.png" alt="logo" />
           <nav>
             <ul>
-              <Link href="#destination1">
+              <Link href="#home">
                 <a style={{ color: "#040404" }}>Home</a>
               </Link>
-              <Link href="#destination2">
+              <Link href="#about">
                 <a style={{ color: "#040404" }}>About</a>
               </Link>
-              <Link href="#destination3">
+              <Link href="#gallery">
                 <a style={{ color: "#040404" }}>Gallery</a>
               </Link>
-              <Link href="#destination4">
+              <Link href="#events">
                 <a style={{ color: "#040404" }}>Events</a>
               </Link>
-              <Link href="#destination5">
+              <Link href="#releases">
                 <a style={{ color: "#040404" }}>Releases</a>
               </Link>
-              <Link href="#destination6">
+              <Link href="#contact">
                 <a style={{ color: "#040404" }}>Contact</a>
               </Link>
             </ul>

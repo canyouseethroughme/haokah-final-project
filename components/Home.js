@@ -4,7 +4,7 @@ import React from "react";
 class Home extends React.Component {
   render() {
     return (
-      <div className="parent" id="destination1">
+      <div className="parent" id="home">
         <div className="child1">
           <img src="static/black_white_lunar.jpg" />
         </div>

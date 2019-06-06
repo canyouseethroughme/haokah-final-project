@@ -2,7 +2,7 @@ import Fade from "react-reveal/Fade";
 import Link from "next/link";
 
 const Releases = () => (
-  <div id="destination5">
+  <div id="releases">
     <h1>Releases</h1>
     <div className="grid">
       <Fade left>
@@ -41,7 +41,7 @@ const Releases = () => (
     </div>
 
     <style jsx>{`
-      #destination5 {
+      #releases {
         padding-top: 12rem;
         background-color: #1d1d1d;
         min-height: 100vh;

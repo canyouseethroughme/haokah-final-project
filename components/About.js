@@ -1,7 +1,7 @@
 import Slide from "react-reveal/Slide";
 
 const About = () => (
-  <div id="destination2">
+  <div id="about">
     <h1>About</h1>
     <div className="grid">
       <Slide bottom>
@@ -33,7 +33,7 @@ const About = () => (
       </Slide>
     </div>
     <style jsx>{`
-      #destination2 {
+      #about {
         background-color: #1d1d1d;
         min-height: calc(100vh - 15rem);
         padding-top: 12rem;
@@ -77,7 +77,7 @@ const About = () => (
           margin-left: 1rem;
           margin-bottom: 3rem;
         }
-        #destination2 {
+        #about {
           margin: auto;
         }
         .content {
