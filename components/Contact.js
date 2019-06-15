@@ -3,21 +3,42 @@ import Zoom from "react-reveal/Zoom";
 const Contact = () => (
   <div className="parent" id="contact">
     <h1>Contact</h1>
-    <Zoom left>
-      <p>
-        For bookings, please contact{" "}
-        <a href="mailto:selin@fakesociety.net">selin@fakesociety.net</a> or
-        <a href="mailto:dubla.agency@gmail.com">dubla.agency@gmail.com</a>
-      </p>
-    </Zoom>
-    <Zoom right>
-      {" "}
-      <p>
-        For other inquiries, please contact{" "}
-        <a href="mailto:haokahlive@gmail.com">haokahlive@gmail.com</a> or find
-        us on social media.
-      </p>
-    </Zoom>
+
+    <div className="contact-row">
+      <div className="form-container">
+        <form
+          method="POST"
+          action="https://formspree.io/stefandrei123@gmail.com"
+        >
+          <div className="input-container">
+            <input type="email" name="email" placeholder="Your email" />
+          </div>
+          <div className="textarea-container">
+            <textarea name="message" placeholder="Text Message" />
+          </div>
+          <div className="button-container">
+            <button type="submit">Send Message</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <Zoom left>
+          <p>
+            For bookings, please contact
+            <a href="mailto:selin@fakesociety.net">selin@fakesociety.net</a> or
+            <a href="mailto:dubla.agency@gmail.com">dubla.agency@gmail.com</a>
+          </p>
+        </Zoom>
+        <Zoom right>
+          {" "}
+          <p>
+            For other inquiries, please write us a message or find us on social
+            media.
+          </p>
+        </Zoom>
+      </div>
+    </div>
+
     <Zoom top>
       <div className="div1">
         <a href="https://www.facebook.com/Haokahlive/" target="_blank">
@@ -46,10 +67,25 @@ const Contact = () => (
         background-color: #1d1d1d;
         height: 100vh;
       }
+
+      .contact-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-container {
+        margin-right: 10px;
+      }
+
       .div1 {
         display: flex;
         justify-content: center;
         align-items: flex-end;
+      }
+
+      form {
+        display: grid;
+        margin-bottom: 1rem;
       }
       h1 {
         font-family: "Julius Sans One";
@@ -64,12 +100,52 @@ const Contact = () => (
         font-size: 1rem;
         font-weight: 300;
         letter-spacing: 1px;
-        padding-left: 5rem;
+        padding-right: 3rem;
       }
       a {
         margin-top: 9rem;
         padding: 0.7rem;
         color: #fa5f1a;
+      }
+
+      input {
+        width: 18rem;
+        background-color: transparent;
+        border: 1px solid #fa5f1a;
+        color: #f7f7f2;
+        margin-bottom: 1rem;
+      }
+
+      textarea {
+        width: 18rem;
+        height: 7rem;
+        background-color: transparent;
+        border: 1px solid #fa5f1a;
+        color: #f7f7f2;
+        margin-bottom: 1rem;
+      }
+      input,
+      textarea,
+      button {
+        outline: none;
+        border-radius: 6px;
+      }
+
+      .button-container,
+      .input-container,
+      .textarea-container {
+        text-align: center;
+      }
+      button {
+        border: 0.5px solid #fa5f1a;
+        color: #fa5f1a;
+        background-color: transparent;
+        padding: 0.5rem 2rem;
+      }
+      button:hover {
+        background-color: #fa5f1a;
+        color: #f7f7f2;
+        transition: 0.5s;
       }
       img {
         height: 1.8rem;
@@ -91,6 +167,16 @@ const Contact = () => (
         }
         .parent {
           height: 80vh;
+        }
+
+        .contact-row {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media only screen and (min-width: 1110px) {
+        .div1 {
+          display: none;
         }
       }
     `}</style>

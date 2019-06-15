@@ -42,18 +42,65 @@ const Index = () => {
           />
         </Head>
         <Navbar />
-        <Home />
+        {/* <Home /> */}
         <About />
         <Cards />
         <Events />
         <Releases />
         <Contact />
+        <div className="social-media-container">
+          <a href="https://www.facebook.com/Haokahlive/" target="_blank">
+            <img src="../static/social_media_logo/facebook_512x512.png" />
+          </a>
+          <a href="https://www.instagram.com/haokah__live/" target="_blank">
+            <img src="../static/social_media_logo/instagram2_512x512.png" />
+          </a>
+          <a href="https://soundcloud.com/haokah" target="_blank">
+            <img src="../static/social_media_logo/soundcloud_512x512.png" />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=tlpGGU-yOqo&t=1875s"
+            target="_blank"
+          >
+            <img src="../static/social_media_logo/youtube_512x512.png" />
+          </a>
+          <a href="https://haokah.bandcamp.com/" target="_blank">
+            <img src="../static/social_media_logo/bandcamp_512x512.png" />
+          </a>
+        </div>
       </div>
+
       <style jsx>{`
         .parent {
           width: 1024px;
           margin: auto;
+          position: relative;
         }
+
+        .social-media-container {
+          position: fixed;
+          right: calc((100vw - 1024px) / 2 - 35px);
+          top: 35vh;
+          display: grid;
+        }
+
+        img {
+          height: 1.8rem;
+          object-fit: contain;
+          margin-top: 1rem;
+          opacity: 0.6;
+        }
+        img:hover {
+          opacity: 1;
+          transition: 0.3s;
+        }
+
+        @media only screen and (max-width: 1110px) {
+          .social-media-container {
+            display: none;
+          }
+        }
+
         @media only screen and (max-width: 1023px) {
           .parent {
             width: 100%;

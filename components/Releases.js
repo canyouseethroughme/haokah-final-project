@@ -70,6 +70,7 @@ const Releases = () => (
         text-align: center;
       }
       a {
+        border-radius: 6px;
         border: 0.5px solid #fa5f1a;
         color: #fa5f1a;
         padding: 0.5rem 2rem;

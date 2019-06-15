@@ -26,65 +26,37 @@ class Navbar extends React.Component {
 
     return (
       <div>
-        <div
-          style={{
-            display: active === 0 ? "block" : "none"
-          }}
-        >
-          <img src="static/haokah_logo_white.png" alt="logo" />
+        <div className={hasAnimation && "changeColor"}>
+          <img
+            src={`static/${
+              active ? "haokah_logo.png" : "haokah_logo_white.png"
+            }`}
+            alt="logo"
+          />
           <nav>
-            <ul>
+            <ul className={active && "scrolled"}>
               <Link href="#home">
-                <a style={{ color: "#f7f7f2" }}>Home</a>
+                <a className="underline">Home</a>
               </Link>
               <Link href="#about">
-                <a style={{ color: "#f7f7f2" }}>About</a>
+                <a className="underline">About</a>
               </Link>
               <Link href="#gallery">
-                <a style={{ color: "#f7f7f2" }}>Gallery</a>
+                <a className="underline">Gallery</a>
               </Link>
               <Link href="#events">
-                <a style={{ color: "#f7f7f2" }}>Events</a>
+                <a className="underline">Events</a>
               </Link>
               <Link href="#releases">
-                <a style={{ color: "#f7f7f2" }}>Releases</a>
+                <a className="underline">Releases</a>
               </Link>
               <Link href="#contact">
-                <a style={{ color: "#f7f7f2" }}>Contact</a>
+                <a className="underline">Contact</a>
               </Link>
             </ul>
           </nav>
         </div>
-        <div
-          className={hasAnimation && "changeColor"}
-          style={{
-            display: active === 1 ? "block" : "none"
-          }}
-        >
-          <img src="static/haokah_logo.png" alt="logo" />
-          <nav>
-            <ul>
-              <Link href="#home">
-                <a style={{ color: "#040404" }}>Home</a>
-              </Link>
-              <Link href="#about">
-                <a style={{ color: "#040404" }}>About</a>
-              </Link>
-              <Link href="#gallery">
-                <a style={{ color: "#040404" }}>Gallery</a>
-              </Link>
-              <Link href="#events">
-                <a style={{ color: "#040404" }}>Events</a>
-              </Link>
-              <Link href="#releases">
-                <a style={{ color: "#040404" }}>Releases</a>
-              </Link>
-              <Link href="#contact">
-                <a style={{ color: "#040404" }}>Contact</a>
-              </Link>
-            </ul>
-          </nav>
-        </div>
+
         <style jsx>{`
           div {
             width: 1024px;
@@ -105,6 +77,7 @@ class Navbar extends React.Component {
             padding: 0;
             margin-bottom: 0;
           }
+
           ul > a {
             padding: 1rem;
             font-family: "Roboto Condensed";
@@ -113,7 +86,18 @@ class Navbar extends React.Component {
             letter-spacing: 1.5px;
             text-transform: uppercase;
             text-decoration: none;
+            color: #f7f7f2;
           }
+
+          ul.scrolled > a {
+            color: #040404;
+          }
+
+          ul > a:hover {
+            color: #fa5f1a;
+            transition: 0.5s;
+          }
+
           .changeColor {
             animation: colorChange 0.4s linear forwards;
           }

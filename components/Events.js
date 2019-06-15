@@ -4,7 +4,8 @@ class Events extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      events: []
+      events: [],
+      showAll: false
     };
   }
 
@@ -21,27 +22,38 @@ class Events extends React.Component {
       });
   }
   render() {
-    let events = this.state.events.map((event, index) => {
-      return (
-        <Event
-          key={index}
-          picture={event.acf.haokah_events}
-          date={event.acf.haokah_date_event}
-          event={event.title.rendered}
-          location={event.acf.haokah_location_event}
-          link={event.acf.haokah_url_event}
-        />
-      );
-    });
+    let events = this.state.events
+      .slice(0, this.state.showAll ? undefined : 4)
+      .map((event, index) => {
+        return (
+          <Event
+            key={index}
+            picture={event.acf.haokah_events}
+            date={event.acf.haokah_date_event}
+            event={event.title.rendered}
+            location={event.acf.haokah_location_event}
+            link={event.acf.haokah_url_event}
+          />
+        );
+      });
 
     return (
       <div id="events">
         <h1>Events</h1>
 
         <div className="grid">{events}</div>
+        {!!this.state.events &&
+          this.state.events.length > 4 &&
+          !this.state.showAll && (
+            <div className="button-container">
+              <button onClick={() => this.setState({ showAll: true })}>
+                Show more
+              </button>
+            </div>
+          )}
 
         <style jsx>{`
-          div {
+          #events {
             min-height: calc(100vh - 15rem);
             background-color: #1d1d1d;
             padding-top: 12rem;
@@ -59,6 +71,22 @@ class Events extends React.Component {
             color: #fa5f1a;
             padding-bottom: 5rem;
             padding-left: 10rem;
+          }
+
+          .button-container {
+            text-align: center;
+          }
+          button {
+            border-radius: 6px;
+            border: 0.5px solid #fa5f1a;
+            color: #fa5f1a;
+            background-color: transparent;
+            padding: 0.5rem 2rem;
+          }
+          button:hover {
+            background-color: #fa5f1a;
+            color: #f7f7f2;
+            transition: 0.5s;
           }
           @media only screen and (max-width: 1023px) {
             .grid {
