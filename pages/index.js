@@ -42,7 +42,7 @@ const Index = () => {
           />
         </Head>
         <Navbar />
-        {/* <Home /> */}
+        <Home />
         <About />
         <Cards />
         <Events />

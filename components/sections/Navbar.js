@@ -36,22 +36,22 @@ class Navbar extends React.Component {
           <nav>
             <ul className={active && "scrolled"}>
               <Link href="#home">
-                <a className="underline">Home</a>
+                <a>Home</a>
               </Link>
               <Link href="#about">
-                <a className="underline">About</a>
+                <a>About</a>
               </Link>
               <Link href="#gallery">
-                <a className="underline">Gallery</a>
+                <a>Gallery</a>
               </Link>
               <Link href="#events">
-                <a className="underline">Events</a>
+                <a>Events</a>
               </Link>
               <Link href="#releases">
-                <a className="underline">Releases</a>
+                <a>Releases</a>
               </Link>
               <Link href="#contact">
-                <a className="underline">Contact</a>
+                <a>Contact</a>
               </Link>
             </ul>
           </nav>
